@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-    <!-- Leaflet CSS -->
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Leaflet JavaScript -->
+    
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <title>TELEMETRY SYSTEM</title>
 </head>
@@ -23,7 +24,7 @@
             <img src="etalogo.png" alt="#" width="140px" height="70px">
         </div>
         <div class="heading">
-            <h1 class="heading">Telemetry system of team ETA</h1>
+            <h1 class="heading">Telemetry system - Team ETA</h1>
         </div>
     </nav>
 
@@ -39,13 +40,13 @@
         <div class="box">
             <div class="enginetemperature">
                 <img src="temperature.png" alt="none" width="70px" height="70px" class="temp">
-                <p>Engine Temperature</p>
+                <p>Engine Compartment Temperature</p>
             </div>
             <div class="value" id="temperature">35</div>
         </div>
         <div class="box2">
             <div class="total__volume">
-                <p>Total Volume</p>
+                <p>Total Fuel Volume</p>
             </div>
             <div class="volume__value" id="totalmillilitres">35</div>
         </div>
@@ -73,9 +74,22 @@
             <div class="volume__value2" id="flowrate"></div>
         </div>
     </div>
-    <div id="map" style="height: 400px; width: 100%;"></div>
+    <div id="map" style="height: 100%; width: 100%;"></div>
     
     <!-- Ensure this script tag is after all elements are defined -->
     <script type="module" src="java.js"></script>
+    <script>
+                if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            // Redirect to login page if not logged in
+            window.location.href = 'login.html'; // Update the path if using a different file name
+        }
+
+        function logout() {
+            // Clear the logged-in flag
+            sessionStorage.removeItem('isLoggedIn');
+            // Redirect to login page
+            window.location.href = 'login.html'; // Update the path if using a different file name
+        }
+    </script>
 </body>
 </html>
