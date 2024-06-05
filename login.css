@@ -1,13 +1,17 @@
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
-    margin: 0px 150px;
-    background: url('tm.png') center center / cover no-repeat;
     
+    
+    margin: 0px 180px;
+    background-image: url('TM2.jpg'); /* Replace with the correct path to your image */
+    background-size: cover; /* Scales the image to cover the entire background area */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center center; /* Centers the image */
     
 
 }
@@ -15,18 +19,25 @@ body {
 .login-container{
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 40px rgba(0, 94, 255, 0.43);
+    border-radius: 58px;
+    
+    /* box-shadow: 0px 0px 40px rgba(0, 94, 255, 0.43); */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 53px 5px rgb(66, 23, 23);
     
     
-    width: 500px;
-    height: 450px;
-    color: rgb(0, 0, 0);
+    width: 400px;
+    height: 500px;
+    color: rgb(53, 29, 29);
     
+}
+
+.login-container:hover{
+    border: 12px solid rgba(140, 153, 255, 0);
+    transition: ease-in 0.3s;
 }
 
 h2 {
@@ -59,7 +70,7 @@ h2 {
 button {
     width: 50%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #ff3131;
     border: none;
     color: white;
     font-size: 16px;
@@ -68,7 +79,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c13b1a;
 }
 
 #error-message {
